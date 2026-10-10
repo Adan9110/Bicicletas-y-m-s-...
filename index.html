@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Bicicletas - Todas las Edades</title>
+    <style>
+        /* Estilos generales */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Encabezado y Navegación */
+        header {
+            background-color: #1a252f;
+            color: #ffffff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #e74c3c;
+        }
+
+        /* Sección Principal / Banner */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            background-color: #e74c3c;
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #c0392b;
+        }
+
+        /* Sección de Catálogo */
+        .container {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            color: #2c3e50;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .card-price {
+            font-size: 1.1rem;
+            color: #27ae60;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        /* Sección de Contacto */
+        .contacto {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #1a252f;
+            color: #ffffff;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            nav a {
+                margin: 0 0.5rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">🚲 BiciMundo</div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <section id="inicio" class="hero">
+        <h1>Bicicletas para Toda la Familia</h1>
+        <p>Encuentra el modelo perfecto para niños, jóvenes y adultos.</p>
+        <a href="#catalogo" class="btn">Ver Modelos</a>
+    </section>
+
+    <!-- Catálogo de Productos -->
+    <main id="catalogo" class="container">
+        <h2 class="section-title">Nuestras Bicicletas</h2>
+        <div class="grid">
+            
+            <!-- Tarjeta 1: Niños -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=500&q=80" alt="Bicicleta Infantil">
+                <div class="card-body">
+                    <h3 class="card-title">Bicicleta Infantil (Niños)</h3>
+                    <p>Ideal para aprender a andar. Incluye ruedas de aprendizaje y diseño seguro.</p>
+                    <p class="card-price">Consultar Precio</p>
+                    <a href="#contacto" class="btn">Pedir Info</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2: Montaña/Jóvenes -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=500&q=80" alt="Bicicleta de Montaña">
+                <div class="card-body">
+                    <h3 class="card-title">Bicicleta de Montaña (MTB)</h3>
+                    <p>Resistente y perfecta para terrenos irregulares o paseos en el parque.</p>
+                    <p class="card-price">Consultar Precio</p>
+                    <a href="#contacto" class="btn">Pedir Info</a>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3: Paseo / Adultos -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?auto=format&fit=crop&w=500&q=80" alt="Bicicleta de Paseo">
+                <div class="card-body">
+                    <h3 class="card-title">Bicicleta Urbana (Adultos)</h3>
+                    <p>Comodidad para el transporte diario en la ciudad y paseos relajados.</p>
+                    <p class="card-price">Consultar Precio</p>
+                    <a href="#contacto" class="btn">Pedir Info</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="container">
+        <div class="contacto">
+            <h2 class="section-title">¿Tienes dudas o quieres hacer un pedido?</h2>
+            <p>Contáctanos directamente por teléfono o WhatsApp para recibir atención personalizada.</p>
+            <br>
+            <p><strong>Teléfono / WhatsApp:</strong> +53 56255364</p>
+            <p><strong>Correo electrónico:</strong> adanteyes91@gmail.com</p>
+            <br>
+            <a href="https://wa.me/5356255364" target="_blank" class="btn" style="background-color: #25D366;">Escribir por WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2026 Venta de Bicicletas - Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
